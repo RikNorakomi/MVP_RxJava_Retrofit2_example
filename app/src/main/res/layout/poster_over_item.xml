@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/recycler_background_black"
+              android:orientation="vertical"
+              android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/recycler_poster_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/thumbnail_height_overview_adapter"
+        android:gravity="center"/>
+</LinearLayout>
