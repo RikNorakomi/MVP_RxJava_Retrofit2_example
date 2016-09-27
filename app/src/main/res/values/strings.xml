@@ -1,3 +1,3 @@
 <resources>
-    <string name="app_name">MvcRecyclerExample</string>
+    <string name="app_name">MVP_RxJava_Retrofit_example</string>
 </resources>
