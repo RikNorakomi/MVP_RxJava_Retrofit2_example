@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import norakomi.com.MVP_RxJava_Retrofit2.data.DataManager;
 import norakomi.com.MVP_RxJava_Retrofit2.data.IDataManagerCallback;
 import norakomi.com.MVP_RxJava_Retrofit2.data.models.Poster;
+import norakomi.com.MVP_RxJava_Retrofit2.errorHandling.UIErrorResolution;
 import norakomi.com.MVP_RxJava_Retrofit2.utils.App;
 import norakomi.com.MVP_RxJava_Retrofit2.views.posterOverview.IPosterOverviewMvc;
 import norakomi.com.MVP_RxJava_Retrofit2.views.posterOverview.PosterOverviewMvcImpl;
@@ -44,7 +45,7 @@ public class PosterOverviewFragment extends AbstractFragment implements
             new DataManager().loadSovietArtMePoster(this);
         } catch (Exception e) {
             App.logError(TAG, "Unable to load posters", e);
-            //todo inform user
+            onFailure(e);
         }
     }
 
@@ -62,9 +63,9 @@ public class PosterOverviewFragment extends AbstractFragment implements
     }
 
     @Override
-    public void onFailure(String msg, Throwable t) {
+    public void onFailure(Throwable t) {
         App.logError(TAG, "Failed loading posters: " + t.toString());
-        //todo inform user
+        new UIErrorResolution(mPosterOverviewMVC.getRootView(), t);
     }
     //End IDataManagerCallback methods
 }

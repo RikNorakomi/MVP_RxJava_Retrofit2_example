@@ -36,8 +36,8 @@ public class DataManager {
 
                     @Override
                     public void onError(Throwable t) {
-                        App.log(TAG, "in onError");
-                        dataManagerCallback.onFailure("Failed loading posters", t);
+                        App.logError(TAG, "in onError. Failed loading posters", t);
+                        dataManagerCallback.onFailure(t);
                     }
 
                     @Override

@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity implements AbstractFragment.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
           /*
         The MVC view associated with this activity is very simple, therefore the below lines could

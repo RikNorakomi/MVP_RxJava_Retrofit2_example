@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MVP_RxJava_Retrofit_example</string>
+    <string name="error_http_exception">internal srever error</string>
+    <string name="error_no_network_available">No internetconenction. Please check your internet connection</string>
 </resources>

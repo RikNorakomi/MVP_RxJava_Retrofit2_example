@@ -11,5 +11,5 @@ public interface IDataManagerCallback {
 
     void onDataLoaded(ArrayList<Poster> posters);
 
-    void onFailure(String msg, Throwable t);
+    void onFailure(Throwable t);
 }
